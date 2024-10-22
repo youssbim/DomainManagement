@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domains</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body data-server-no-reload>
+    <!-- Container for login and registration forms -->
+    <div class="container" id="container-access">
+        <!-- Login form -->
+        <div id="login-form">
+            <h2>Login</h2>
+            <form>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="login-email" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Registration form, initially hidden -->
+        <div id="register-form" class="hidden">
+            <h2>Register</h2>
+            <form id="registration-form">
+                <label for="name">First Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="surname">Last Name:</label>
+                <input type="text" id="surname" name="surname" required>
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" name="register-email" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Toggle buttons login/register -->
+        <div class="toggle-buttons">
+            <p>or</p>
+            <button id="showLogin" class="hidden">Login</button>
+            <button id="showRegister">Register</button>
+        </div>
+    </div>
+
+    <!-- Container for domain handling forms, initially hidden -->
+    <div class="container" id="container-check-domain" style="display: none;">
+        <!-- Domain check form -->
+        <div id="check-domain-form">
+            <form style="display: flex; align-items: center;">
+                <label for="input-domain">Check Domain:</label>
+                <input type="text" id="input-domain" name="input-domain" title="Please enter a valid domain name" required>
+                <button type="submit">Check Availability</button>
+            </form>
+        </div>
+        <!-- Domain purchase form, initially hidden -->
+        <div id="purchase-domain" style="display: none;">
+            <form style="display: flex">
+                <span id="span-purchase-domain">Domain available, complete the purchase!</span>
+                <button type="submit" id="button-buy-domain">Buy</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Container for user information, initially hidden -->
+    <div class="container" id="container-user-information" style="display: none;">
+        <h2>Your Information</h2>
+        <div class="button-row">
+            <button id="showDomainList">View Domains</button>
+            <button id="showOrderList">View Orders</button>
+        </div>
+        <!-- User's domain information, initially hidden -->
+        <table id="domain-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Domain</th>
+                    <th>Registration Date</th>
+                    <th>Expiration Date</th>
+                    <th class="hidden">Action</th>
+                </tr>
+            </thead>
+            <tbody id="table-domain-body">
+            </tbody>
+        </table>
+        <table id="order-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Domain</th>
+                    <th>Order Date</th>
+                    <th>Order Type</th>
+                    <th>Amount Paid</th>
+                </tr>
+            </thead>
+            <tbody id="table-order-body">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pop-up form for payment details -->
+    <div id="popup-form" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Payment Details</h2>
+            <form id="popup-form-content">
+                <label for="input-years-domain">Period in years:</label>
+                <input type="number" id="input-years-domain" name="input-years-domain" min="1" max="10" required>
+                <label for="card-owner">Card Owner:</label>
+                <input type="text" id="card-owner" name="card-owner" required>
+                <label for="card-number">Card Number:</label>
+                <input type="number" id="card-number" name="card-number" required>
+                <label for="card-expiration">Expiration Date:</label>
+                <input type="date" id="card-expiration" name="card-expiration" required>
+                <label for="card-cvv">CVV:</label>
+                <input type="number" id="card-cvv" name="card-cvv" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./src/main.js"></script>
+</body>
+</html>

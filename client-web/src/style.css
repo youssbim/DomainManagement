@@ -1,0 +1,229 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    width: 350px;
+}
+
+.container#container-check-domain,
+.container#container-user-information {
+    width: 650px;
+}
+
+.container#container-user-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.button-row button {
+    width: 48%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#container-check-domain form {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+#container-check-domain label {
+    margin-right: 10px;
+    margin-top: 5px;
+    white-space: nowrap;
+}
+
+#container-check-domain input {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#input-years-domain {
+    width: 50px; 
+    padding: 8px; 
+    font-size: 16px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#container-check-domain button {
+    width: auto;
+    margin-top: 0;
+}
+
+#container-user-information button {
+    width: 30%;
+    margin-top: 5px;
+}
+
+.toggle-buttons button {
+    background-color: #6c757d;
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#span-purchase-domain {
+    color: green;
+    margin-right: 20px;
+    text-align: left;
+}
+
+#button-buy-domain {
+    background-color: green;
+    align-items: center;
+}
+
+#unavailable-message {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#user-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#user-info-table th, #user-info-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#user-info-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#user-info-table caption {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+#domain-table, #order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#domain-table th, #order-table th {
+    background-color: transparent;
+    border: none;
+}
+
+#domain-table td, #order-table td {
+    border: 1px solid #ddd;
+    padding: 4px;
+    text-align: center;
+    background-color: #f7f3f3;
+}
+
+#domain-table th.hidden {
+    display: none;
+}
+
+#domain-table button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+#domain-table button:hover {
+    background-color: #218838;
+}
